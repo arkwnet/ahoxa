@@ -64,7 +64,7 @@ export default {
 	color: #fff;
 	font-family: "Roboto", "Noto Sans JP";
 	text-shadow: 0 0 5px #616161;
-	z-index: 1;
+	z-index: 10;
 }
 
 .main-date {
@@ -91,6 +91,22 @@ export default {
 	z-index: 0;
 }
 
+@media screen and (min-width: 1400px) {
+	.main-date {
+		bottom: 320px;
+		font-size: 80px;
+	}
+	.main-time {
+		bottom: 0;
+		font-size: 300px;
+	}
+	.main-second {
+		right: -25px;
+		top: -170px;
+		font-size: 700px;
+	}
+}
+
 @media screen and (max-width: 800px) {
 	.main-date {
 		bottom: 140px;
@@ -98,6 +114,28 @@ export default {
 	}
 	.main-time {
 		font-size: 100px;
+	}
+}
+
+@media screen and (max-width: 560px) {
+	.main-second {
+		right: -10px;
+		top: -65px;
+		font-size: 300px;
+		letter-spacing: -10px;
+	}
+}
+
+@media screen and (max-width: 460px) {
+	.main-date, .main-time {
+		left: 25px;
+	}
+	.main-date {
+		bottom: 125px;
+		font-size: 28px;
+	}
+	.main-time {
+		bottom: 15px;
 	}
 }
 </style>
