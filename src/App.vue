@@ -7,23 +7,33 @@
 		<source :src="video" type="video/mp4">
 	</video>
 	<div class="main">
-		<Clock />
+		<Clock @openVersionDialog="openVersionDialog" />
 	</div>
+	<transition name="cover">
+		<div class="cover" id="dialog_cover" v-if="isDialogCover" @click="closeVersionDialog"></div>
+	</transition>
+	<transition name="dialog">
+		<VersionDialog v-if="isVersionDialog" />
+	</transition>
 </template>
 
 <script>
 import Clock from './components/Clock.vue';
+import VersionDialog from './components/VersionDialog.vue';
 export default {
 	name: 'App',
 	components: {
-		Clock
+		Clock,
+		VersionDialog
 	},
 	data() {
 		return {
 			video: "video.mp4",
 			nightModeImage: "night_mode.svg",
 			nightMode: 0,
-			isCover: false
+			isCover: false,
+			isDialogCover: false,
+			isVersionDialog: false
 		}
 	},
 	mounted: function() {
@@ -38,6 +48,14 @@ export default {
 			if (this.nightMode == 2) { this.nightMode = 0; }
 			if (this.nightMode == 1) { this.isCover = true; }
 			if (this.nightMode == 0) { this.isCover = false; }
+		},
+		openVersionDialog: function() {
+			this.isDialogCover = true;
+			this.isVersionDialog = true;
+		},
+		closeVersionDialog: function() {
+			this.isDialogCover = false;
+			this.isVersionDialog = false;
 		}
 	}
 }
@@ -81,8 +99,15 @@ body {
 	left: 0;
 	top: 0;
 	background-color: #000;
-	z-index: 90;
 	opacity: 0.85;
+}
+
+#cover {
+	z-index: 90;
+}
+
+#dialog_cover {
+	z-index: 110;
 }
 
 .cover-enter-from, .cover-leave-to {
@@ -95,6 +120,18 @@ body {
 
 .cover-enter-active, .cover-leave-active {
 	transition: opacity 1s;
+}
+
+.dialog-enter-from, .dialog-leave-to {
+	opacity: 0;
+}
+
+.dialog-enter-to, .dialog-leave-from {
+	opacity: 1;
+}
+
+.dialog-enter-active, .dialog-leave-active {
+	transition: opacity 0.3s;
 }
 
 .button {

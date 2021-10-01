@@ -1,6 +1,6 @@
 <template>
 	<div class="main-date" @click="changeScreenMode">{{ date }}</div>
-	<div class="main-time">{{ time }}</div>
+	<div class="main-time" @click="showVersionDialog">{{ time }}</div>
 	<div class="main-second">{{ second }}</div>
 </template>
 
@@ -52,6 +52,9 @@ export default {
 			if (this.screenMode == 2) { this.screenMode = 0; }
 			if (this.screenMode == 1) { document.body.requestFullscreen(); }
 			if (this.screenMode == 0) { document.exitFullscreen(); }
+		},
+		showVersionDialog: function() {
+			this.$emit("openVersionDialog");
 		}
 	}
 }
