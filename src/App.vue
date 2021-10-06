@@ -13,7 +13,7 @@
 		<div class="cover" id="dialog_cover" v-if="isDialogCover" @click="closeVersionDialog"></div>
 	</transition>
 	<transition name="dialog">
-		<VersionDialog v-if="isVersionDialog" />
+		<VersionDialog v-if="isVersionDialog" @closeVersionDialog="closeVersionDialog" />
 	</transition>
 </template>
 
