@@ -60,7 +60,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .main-date, .main-time {
 	position: fixed;
 	left: 30px;

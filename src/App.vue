@@ -61,7 +61,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 * {
 	margin: 0;
 	padding: 0;
@@ -139,14 +139,13 @@ body {
 	height: 64px;
 	border: solid 3px #fff;
 	border-radius: 50%;
-}
-
-.button img {
-	width: 32px;
-	height: 32px;
-	position: absolute;
-	left: 16px;
-	top: 16px;
+	img {
+		width: 32px;
+		height: 32px;
+		position: absolute;
+		left: 16px;
+		top: 16px;
+	}
 }
 
 #night_mode {
@@ -162,14 +161,13 @@ body {
 	.button {
 		width: 48px;
 		height: 48px;
-	}
-
-	.button img {
-		width: 32px;
-		height: 32px;
-		position: absolute;
-		left: 8px;
-		top: 8px;
+		img {
+			width: 32px;
+			height: 32px;
+			position: absolute;
+			left: 8px;
+			top: 8px;
+		}
 	}
 }
 </style>
