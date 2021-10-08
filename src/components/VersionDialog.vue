@@ -36,7 +36,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .dialog {
 	position: fixed;
 	left: 15%;
@@ -47,75 +47,65 @@ export default {
 	font-family: "Roboto", "Noto Sans JP";
 	z-index: 200;
 	border-radius: 20px;
-}
-
-.dialog .header, .dialog .contents, .dialog .button {
-	box-sizing: border-box;
-}
-
-.dialog .header {
-	width: 100%;
-	height: 60px;
-	padding: 11px 15px;
-	position: absolute;
-	left: 0;
-	top: 0;
-	font-size: 24px;
-	border-bottom: solid 1px gray;
-}
-
-.dialog .contents {
-	width: 100%;
-	height: calc(100% - 60px);
-	padding: 30px 15px;
-	position: absolute;
-	left: 0;
-	top: 60px;
-	font-size: 18px;
-	overflow-y: auto;
-}
-
-.dialog .contents a {
-	color: #2196F3;
-}
-
-.dialog .contents a:hover {
-	color: #64B5F6;
-}
-
-.dialog .contents .logo {
-	margin-bottom: 30px;
-	text-align: center;
-}
-
-.dialog .contents .version {
-	margin-bottom: 40px;
-	text-align: center;
-	font-size: 24px;
-}
-
-.dialog .contents .license {
-	text-align: center;
-}
-
-.dialog .button {
-	padding: 6px 20px;
-	height: 40px;
-	position: absolute;
-	right: 20px;
-	top: 10px;
-	color: #212121;
-	background-color: #BDBDBD;
-	border-radius: 20px;
-	transition-property: background-color,color;
-	transition-duration: 0.1s;
-	transition-timing-function: ease-in-out;
-}
-
-.dialog .button:hover {
-	color: #FAFAFA;
-	background-color: #212121;
-	cursor: pointer;
+	.header, .contents, .button {
+		box-sizing: border-box;
+	}
+	.header {
+		width: 100%;
+		height: 60px;
+		padding: 11px 15px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		font-size: 24px;
+		border-bottom: solid 1px gray;
+	}
+	.contents {
+		width: 100%;
+		height: calc(100% - 60px);
+		padding: 30px 15px;
+		position: absolute;
+		left: 0;
+		top: 60px;
+		font-size: 18px;
+		overflow-y: auto;
+		a {
+			color: #2196F3;
+			&:hover {
+				color: #64B5F6;
+			}
+		}
+		.logo {
+			margin-bottom: 30px;
+			text-align: center;
+		}
+		.version {
+			margin-bottom: 40px;
+			text-align: center;
+			font-size: 24px;
+		}
+		.license {
+			text-align: center;
+		}
+	}
+	.button {
+		padding: 6px 20px;
+		height: 40px;
+		position: absolute;
+		right: 20px;
+		top: 10px;
+		color: #212121;
+		background-color: #BDBDBD;
+		border-radius: 20px;
+		transition-property: background-color,color;
+		transition-duration: 0.1s;
+		transition-timing-function: ease-in-out;
+		&:hover {
+			color: #FAFAFA;
+			background-color: #212121;
+			cursor: pointer;
+		}
+	}
 }
 
 @media screen and (max-width: 700px) {
