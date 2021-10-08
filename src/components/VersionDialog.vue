@@ -3,7 +3,7 @@
 		<div class="header">Ahoxa について</div>
 		<div class="contents">
 			<div class="logo"><img :src="logoImage"></div>
-			<div class="version">Version 1.4.0</div>
+			<div class="version">Version {{ version }}</div>
 			<div class="license">
 				<p>
 					Copyright (c) 2021 Sora Arakawa<br>
@@ -24,7 +24,8 @@ export default {
 	components: {},
 	data() {
 		return {
-			logoImage: "logo.svg"
+			logoImage: "logo.svg",
+			version: require("../../package.json").version
 		}
 	},
 	methods: {
