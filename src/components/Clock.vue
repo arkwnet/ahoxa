@@ -14,7 +14,8 @@ export default {
 			date: '',
 			time: '',
 			second: '',
-			screenMode: 0
+			screenMode: 0,
+			frame: 0
 		};
 	},
 	mounted: function() {
@@ -25,6 +26,7 @@ export default {
 			let now, year, month, day, dayOfWeek, hour, min, sec;
 			let dayOfWeekArray = ["日", "月", "火", "水", "木", "金", "土"];
 			let vm = this;
+			let frame = this.frame;
 			(function loop() {
 				now = new Date();
 				year = now.getFullYear();
@@ -37,6 +39,10 @@ export default {
 				vm.date = '' + year + '年' + month + '月' + day + '日（' + dayOfWeek + '）';
 				vm.time = '' + hour + ':' + min;
 				vm.second = sec;
+				if (hour == 0 && min == 0 && sec == 0 && frame > 360) {
+					location.reload();
+				}
+				frame++;
 				requestAnimationFrame(loop);
 			}());
 		},
