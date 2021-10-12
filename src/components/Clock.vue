@@ -41,9 +41,9 @@ export default {
 				vm.second = sec;
 				if (frame == 360) {
 					vm.axios.get("./config.json").then((response) => {
-						//alert(response.data.version);
+						console.log(response.data.version);
 					}).catch((e) => {
-						//alert(e);
+						console.log(e);
 					});
 				}
 				if (frame >= 108000) {
