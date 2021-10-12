@@ -39,8 +39,15 @@ export default {
 				vm.date = '' + year + '年' + month + '月' + day + '日（' + dayOfWeek + '）';
 				vm.time = '' + hour + ':' + min;
 				vm.second = sec;
-				if (hour == 0 && min == 0 && sec == 0 && frame > 360) {
-					location.reload();
+				if (frame == 360) {
+					vm.axios.get("./config.json").then((response) => {
+						//alert(response.data.version);
+					}).catch((e) => {
+						//alert(e);
+					});
+				}
+				if (frame >= 108000) {
+					frame = 0;
 				}
 				frame++;
 				requestAnimationFrame(loop);
