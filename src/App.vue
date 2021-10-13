@@ -9,6 +9,9 @@
 	<div class="main">
 		<Clock @openVersionDialog="openVersionDialog" />
 	</div>
+	<transition name="dialog">
+		<UpdateAlert v-if="isUpdateAlert" />
+	</transition>
 	<transition name="cover">
 		<div class="cover" id="dialog_cover" v-if="isDialogCover" @click="closeVersionDialog"></div>
 	</transition>
@@ -19,11 +22,13 @@
 
 <script>
 import Clock from './components/Clock.vue';
+import UpdateAlert from './components/UpdateAlert.vue';
 import VersionDialog from './components/VersionDialog.vue';
 export default {
 	name: 'App',
 	components: {
 		Clock,
+		UpdateAlert,
 		VersionDialog
 	},
 	data() {
@@ -32,6 +37,7 @@ export default {
 			nightModeImage: "night_mode.svg",
 			nightMode: 0,
 			isCover: false,
+			isUpdateAlert: true,
 			isDialogCover: false,
 			isVersionDialog: false
 		}
