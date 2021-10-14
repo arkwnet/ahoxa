@@ -7,10 +7,10 @@
 		<source :src="video" type="video/mp4">
 	</video>
 	<div class="main">
-		<Clock @openVersionDialog="openVersionDialog" />
+		<Clock @openVersionDialog="openVersionDialog" @openUpdateAlert="openUpdateAlert" />
 	</div>
 	<transition name="dialog">
-		<UpdateAlert v-if="isUpdateAlert" />
+		<UpdateAlert v-if="isUpdateAlert" @click="reload" />
 	</transition>
 	<transition name="cover">
 		<div class="cover" id="dialog_cover" v-if="isDialogCover" @click="closeVersionDialog"></div>
@@ -37,7 +37,7 @@ export default {
 			nightModeImage: "assets/night_mode.svg",
 			nightMode: 0,
 			isCover: false,
-			isUpdateAlert: true,
+			isUpdateAlert: false,
 			isDialogCover: false,
 			isVersionDialog: false
 		}
@@ -62,6 +62,12 @@ export default {
 		closeVersionDialog: function() {
 			this.isDialogCover = false;
 			this.isVersionDialog = false;
+		},
+		openUpdateAlert: function() {
+			this.isUpdateAlert = true;
+		},
+		reload: function() {
+			location.reload();
 		}
 	}
 }

@@ -8,7 +8,7 @@
 export default {
 	name: 'App',
 	components: {},
-        emits: ["openVersionDialog"],
+	emits: ["openVersionDialog", "openUpdateAlert"],
 	data() {
 		return {
 			date: '',
@@ -41,7 +41,8 @@ export default {
 				vm.second = sec;
 				if (frame == 360) {
 					vm.axios.get("./config.json").then((response) => {
-						console.log(response.data.version);
+						console.log(response.data);
+						vm.$emit("openUpdateAlert");
 					}).catch((e) => {
 						console.log(e);
 					});

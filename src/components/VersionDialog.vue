@@ -22,7 +22,7 @@
 export default {
 	name: 'App',
 	components: {},
-        emits: ["closeVersionDialog"],
+	emits: ["closeVersionDialog"],
 	data() {
 		return {
 			logoImage: "assets/logo.svg",
