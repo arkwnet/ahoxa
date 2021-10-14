@@ -25,7 +25,7 @@ export default {
         emits: ["closeVersionDialog"],
 	data() {
 		return {
-			logoImage: "logo.svg",
+			logoImage: "assets/logo.svg",
 			version: require("../../package.json").version
 		}
 	},

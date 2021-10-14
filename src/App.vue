@@ -33,8 +33,8 @@ export default {
 	},
 	data() {
 		return {
-			video: "video.mp4",
-			nightModeImage: "night_mode.svg",
+			video: "assets/video.mp4",
+			nightModeImage: "assets/night_mode.svg",
 			nightMode: 0,
 			isCover: false,
 			isUpdateAlert: true,
