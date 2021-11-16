@@ -8,13 +8,15 @@
 export default {
 	name: 'App',
 	components: {},
-        emits: ["openVersionDialog"],
+	emits: ["openVersionDialog", "openUpdateAlert"],
 	data() {
 		return {
 			date: '',
 			time: '',
 			second: '',
-			screenMode: 0
+			screenMode: 0,
+			frame: 0,
+			updateFlag: false
 		};
 	},
 	mounted: function() {
@@ -25,6 +27,7 @@ export default {
 			let now, year, month, day, dayOfWeek, hour, min, sec;
 			let dayOfWeekArray = ["日", "月", "火", "水", "木", "金", "土"];
 			let vm = this;
+			let frame = this.frame;
 			(function loop() {
 				now = new Date();
 				year = now.getFullYear();
@@ -37,8 +40,29 @@ export default {
 				vm.date = '' + year + '年' + month + '月' + day + '日（' + dayOfWeek + '）';
 				vm.time = '' + hour + ':' + min;
 				vm.second = sec;
+				if (frame == 360 && vm.updateFlag == false) {
+					vm.axios.get("./config.json").then((response) => {
+						const oldVersion = vm.convertVersion(require("../../package.json").version);
+						const newVersion = vm.convertVersion(response.data.version);
+						if (newVersion > oldVersion) {
+							vm.$emit("openUpdateAlert");
+							vm.updateFlag = true;
+						}
+					}).catch((e) => {
+						console.log(e);
+					});
+				}
+				if (frame >= 18000) {
+					frame = 0;
+				}
+				frame++;
 				requestAnimationFrame(loop);
 			}());
+		},
+		convertVersion: function(version) {
+			const versionArray = version.split(".");
+			const versionInt = (versionArray[0] * 100) + (versionArray[1] * 10) + versionArray[2];
+			return versionInt;
 		},
 		clockProcess: function(str) {
 			if (str < 10) {

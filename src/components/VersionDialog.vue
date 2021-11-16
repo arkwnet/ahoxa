@@ -22,10 +22,10 @@
 export default {
 	name: 'App',
 	components: {},
-        emits: ["closeVersionDialog"],
+	emits: ["closeVersionDialog"],
 	data() {
 		return {
-			logoImage: "logo.svg",
+			logoImage: "assets/logo.svg",
 			version: require("../../package.json").version
 		}
 	},
