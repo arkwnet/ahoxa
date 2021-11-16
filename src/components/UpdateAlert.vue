@@ -29,8 +29,8 @@ export default {
 	position: fixed;
 	left: 20px;
 	top: 20px;
-	color: #212121;	// 900
-	background-color: #C5E1A5;	// 200
+	color: #212121;
+	background-color: #C5E1A5;
 	border-radius: 20px;
 	box-sizing: border-box;
 	.icon, .heading, .text {
@@ -54,6 +54,18 @@ export default {
 		left: 50px;
 		top: 36px;
 		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.alert {
+		width: calc(100% - 120px);
+		.heading, .text {
+			width: calc(100% - 65px);
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
 	}
 }
 </style>
