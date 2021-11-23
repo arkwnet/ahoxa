@@ -1,0 +1,45 @@
+.alert {
+	width: 400px;
+	height: 64px;
+	position: fixed;
+	left: 20px;
+	top: 20px;
+	color: #212121;
+	background-color: #C5E1A5;
+	border-radius: 20px;
+	box-sizing: border-box;
+	.icon, .heading, .text {
+		position: absolute;
+	}
+	.icon {
+		width: 32px;
+		height: 32px;
+		left: 15px;
+		top: 10px;
+	}
+	.heading, .text {
+		font-family: "Roboto", "Noto Sans JP";
+	}
+	.heading {
+		left: 50px;
+		top: 4px;
+		font-size: 22px;
+	}
+	.text {
+		left: 50px;
+		top: 36px;
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.alert {
+		width: calc(100% - 120px);
+		.heading, .text {
+			width: calc(100% - 65px);
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
+}
