@@ -6,7 +6,7 @@
 	<video class="video" id="video" loop>
 		<source :src="video" type="video/mp4">
 	</video>
-	<div class="main">
+	<div class="main" :style="style">
 		<Clock @openVersionDialog="openVersionDialog" @openUpdateAlert="openUpdateAlert" />
 	</div>
 	<transition name="dialog">
@@ -34,6 +34,7 @@ export default {
 	data() {
 		return {
 			video: "assets/video.mp4",
+			style: "background-image: url('assets/bg.jpg')",
 			nightModeImage: "assets/night_mode.svg",
 			nightMode: 0,
 			isCover: false,
