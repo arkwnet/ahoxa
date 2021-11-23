@@ -1,4 +1,4 @@
-# ahoxa
+# Ahoxa
 
 ## Project setup
 ```
