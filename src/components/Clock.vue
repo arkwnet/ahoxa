@@ -86,5 +86,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/css/Clock.scss";
+@import "../assets/sass/Clock.scss";
 </style>
