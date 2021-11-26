@@ -14,7 +14,7 @@
 
 <script>
 export default {
-	name: 'App',
+	name: "App",
 	components: {},
 	data() {
 		return {}
@@ -23,5 +23,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/css/UpdateAlert.scss";
+@import "../assets/sass/UpdateAlert.scss";
 </style>

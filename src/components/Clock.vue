@@ -6,14 +6,14 @@
 
 <script>
 export default {
-	name: 'App',
+	name: "App",
 	components: {},
 	emits: ["openVersionDialog", "openUpdateAlert"],
 	data() {
 		return {
-			date: '',
-			time: '',
-			second: '',
+			date: "",
+			time: "",
+			second: "",
 			screenMode: 0,
 			frame: 0,
 			updateFlag: false
@@ -24,8 +24,8 @@ export default {
 	},
 	methods: {
 		updateClock: function() {
+			const dayOfWeekArray = ["日", "月", "火", "水", "木", "金", "土"];
 			let now, year, month, day, dayOfWeek, hour, min, sec;
-			let dayOfWeekArray = ["日", "月", "火", "水", "木", "金", "土"];
 			let vm = this;
 			let frame = this.frame;
 			(function loop() {
@@ -37,8 +37,8 @@ export default {
 				hour = vm.clockProcess(now.getHours());
 				min = vm.clockProcess(now.getMinutes());
 				sec = vm.clockProcess(now.getSeconds());
-				vm.date = '' + year + '年' + month + '月' + day + '日（' + dayOfWeek + '）';
-				vm.time = '' + hour + ':' + min;
+				vm.date = "" + year + "年" + month + "月" + day + "日（" + dayOfWeek + "）";
+				vm.time = "" + hour + ":" + min;
 				vm.second = sec;
 				if (frame == 360 && vm.updateFlag == false) {
 					vm.axios.get("./config.json").then((response) => {
@@ -86,5 +86,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/css/Clock.scss";
+@import "../assets/sass/Clock.scss";
 </style>
