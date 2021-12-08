@@ -1,12 +1,14 @@
 import Clock from "../../components/Clock.vue";
 import UpdateAlert from "../../components/UpdateAlert.vue";
 import VersionDialog from "../../components/VersionDialog.vue";
+import OptionDialog from "../../components/OptionDialog.vue";
 export default {
 	name: "App",
 	components: {
 		Clock,
 		UpdateAlert,
-		VersionDialog
+		VersionDialog,
+		OptionDialog
 	},
 	data() {
 		return {
@@ -14,10 +16,12 @@ export default {
 			style: "background-image: url('assets/bg.jpg')",
 			nightModeImage: "assets/night_mode.svg",
 			nightMode: 0,
+			optionImage: "assets/option.svg",
 			isCover: false,
 			isUpdateAlert: false,
 			isDialogCover: false,
-			isVersionDialog: false
+			isVersionDialog: false,
+			isOptionDialog: false
 		}
 	},
 	mounted: function() {
@@ -43,6 +47,14 @@ export default {
 		},
 		openUpdateAlert: function() {
 			this.isUpdateAlert = true;
+		},
+		openOptionDialog: function() {
+			this.isDialogCover = true;
+			this.isOptionDialog = true;
+		},
+		closeOptionDialog: function() {
+			this.isDialogCover = false;
+			this.isOptionDialog = false;
 		},
 		reload: function() {
 			location.reload();

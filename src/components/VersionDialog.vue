@@ -38,5 +38,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/sass/VersionDialog.scss";
+@import "../assets/sass/Dialog.scss";
 </style>
