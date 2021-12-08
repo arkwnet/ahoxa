@@ -14,13 +14,13 @@
 		<UpdateAlert v-if="isUpdateAlert" @click="reload" />
 	</transition>
 	<transition name="cover">
-		<div class="cover" id="dialog_cover" v-if="isDialogCover" @click="closeVersionDialog"></div>
+		<div class="cover" id="dialog_cover" v-if="isDialogCover" @click="closeDialog"></div>
 	</transition>
 	<transition name="dialog">
-		<VersionDialog v-if="isVersionDialog" @closeVersionDialog="closeVersionDialog" />
+		<VersionDialog v-if="isVersionDialog" @closeDialog="closeDialog" />
 	</transition>
 	<transition name="dialog">
-		<OptionDialog v-if="isOptionDialog" @closeOptionDialog="closeOptionDialog" />
+		<OptionDialog v-if="isOptionDialog" @closeDialog="closeDialog" />
 	</transition>
 </template>
 

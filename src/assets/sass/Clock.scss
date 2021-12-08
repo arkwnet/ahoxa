@@ -2,21 +2,21 @@
 	position: fixed;
 	left: 30px;
 	color: #fff;
-	font-family: "Roboto", "Noto Sans JP";
 	text-shadow: 0 0 5px #616161;
 	z-index: 10;
 }
 
 .main-date {
 	bottom: 200px;
+	font-family: RobotoRegular, NotoSansJPRegular;
 	font-size: 60px;
 	font-weight: normal;
 }
 
 .main-time {
 	bottom: 30px;
+	font-family: RobotoMedium;
 	font-size: 160px;
-	font-weight: 500;
 }
 
 .main-second {
@@ -24,7 +24,7 @@
 	right: -15px;
 	top: -120px;
 	color: #fff;
-	font-family: "Roboto", "Noto Sans JP";
+	font-family: RobotoRegular, NotoSansJPRegular;
 	font-size: 500px;
 	opacity: 0.3;
 	letter-spacing: -15px;

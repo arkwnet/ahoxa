@@ -41,10 +41,6 @@ export default {
 			this.isDialogCover = true;
 			this.isVersionDialog = true;
 		},
-		closeVersionDialog: function() {
-			this.isDialogCover = false;
-			this.isVersionDialog = false;
-		},
 		openUpdateAlert: function() {
 			this.isUpdateAlert = true;
 		},
@@ -52,8 +48,9 @@ export default {
 			this.isDialogCover = true;
 			this.isOptionDialog = true;
 		},
-		closeOptionDialog: function() {
+		closeDialog: function() {
 			this.isDialogCover = false;
+			this.isVersionDialog = false;
 			this.isOptionDialog = false;
 		},
 		reload: function() {

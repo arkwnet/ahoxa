@@ -3,7 +3,7 @@
 		<div class="header">設定</div>
 		<div class="contents">
 		</div>
-		<div class="button" @click="closeOptionDialog()">閉じる</div>
+		<div class="button" @click="closeDialog()">閉じる</div>
 	</div>
 </template>
 
@@ -11,7 +11,7 @@
 export default {
 	name: "App",
 	components: {},
-	emits: ["closeOptionDialog"],
+	emits: ["closeDialog"],
 	data() {
 		return {
 			logoImage: "assets/logo.svg",
@@ -19,8 +19,8 @@ export default {
 		}
 	},
 	methods: {
-		closeOptionDialog: function() {
-			this.$emit("closeOptionDialog");
+		closeDialog: function() {
+			this.$emit("closeDialog");
 		}
 	}
 }
