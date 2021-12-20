@@ -1,0 +1,27 @@
+table {
+	margin-top: -10px;
+}
+
+tr {
+	height: 40px;
+}
+
+th {
+	width: 200px;
+	font-family: RobotoRegular, NotoSansJPRegular;
+	font-size: 18px;
+	font-weight: normal;
+	text-align: left;
+}
+
+td select {
+	width: 200px;
+	height: 30px;
+	margin-top: 1px;
+	font-family: RobotoRegular, NotoSansJPRegular;
+	font-size: 18px;
+	background-color: #FAFAFA;
+	color: #424242;
+	border: 0;
+	border-bottom: solid 1px #9E9E9E;
+}

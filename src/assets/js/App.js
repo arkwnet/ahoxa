@@ -13,7 +13,8 @@ export default {
 	data() {
 		return {
 			video: "assets/video.mp4",
-			style: "background-image: url('assets/bg.jpg')",
+			theme: "blue",
+			style: "",
 			nightModeImage: "assets/night_mode.svg",
 			nightMode: 0,
 			optionImage: "assets/option.svg",
@@ -26,6 +27,7 @@ export default {
 	},
 	mounted: function() {
 		document.title = "Ahoxa";
+		this.style = "background-image: url('assets/themes/" + this.theme + ".png')";
 		const v = document.getElementById("video");
 		v.volume = 0;
 		v.play();
