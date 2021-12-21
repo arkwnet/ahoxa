@@ -27,7 +27,7 @@ export default {
 	},
 	mounted: function() {
 		document.title = "Ahoxa";
-		this.style = "background-image: url('assets/themes/" + this.theme + ".png')";
+		this.loadTheme(this.theme);
 		const v = document.getElementById("video");
 		v.volume = 0;
 		v.play();
@@ -54,6 +54,13 @@ export default {
 			this.isDialogCover = false;
 			this.isVersionDialog = false;
 			this.isOptionDialog = false;
+		},
+		loadTheme: function(name) {
+			this.axios.get("./assets/themes/" + name + "/theme.json").then((response) => {
+				this.style = "background-image: url('assets/themes/" + name + "/" + response.data.image + "')";
+			}).catch((e) => {
+				console.log(e);
+			});
 		},
 		reload: function() {
 			location.reload();
