@@ -20,7 +20,7 @@
 		<VersionDialog v-if="isVersionDialog" @closeDialog="closeDialog" />
 	</transition>
 	<transition name="dialog">
-		<OptionDialog v-if="isOptionDialog" @closeDialog="closeDialog" />
+		<OptionDialog v-if="isOptionDialog" :currentOption="this.option" @closeDialog="closeDialog" @changeOption="changeOption" />
 	</transition>
 </template>
 

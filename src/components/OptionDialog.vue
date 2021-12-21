@@ -7,16 +7,8 @@
 					<tr>
 						<th>テーマ</th>
 						<td>
-							<select>
-								<option>blue</option>
-							</select>
-						</td>
-					</tr>
-					<tr>
-						<th>言語 (Language)</th>
-						<td>
-							<select>
-								<option>日本語</option>
+							<select v-model="option.theme" @change="changeOption">
+								<option v-for="theme in optionThemes" :key="theme.name" :value="theme.name">{{ theme.name }}</option>
 							</select>
 						</td>
 					</tr>
@@ -31,16 +23,36 @@
 export default {
 	name: "App",
 	components: {},
-	emits: ["closeDialog"],
+	props: {
+		currentOption: Object
+	},
+	emits: ["closeDialog", "changeOption"],
 	data() {
 		return {
-			logoImage: "assets/logo.svg",
-			version: require("../../package.json").version
+			option: {
+				"theme": "blue"
+			},
+			optionThemes: []
 		}
+	},
+	mounted: function() {
+		this.option = this.currentOption;
+		this.axios.get("./config.json").then((response) => {
+			let optionThemes = [];
+			for (let i = 0; i < response.data.themes.length; i++) {
+				optionThemes.push({name: response.data.themes[i]});
+			}
+			this.optionThemes = optionThemes;
+		}).catch((e) => {
+			console.log(e);
+		});
 	},
 	methods: {
 		closeDialog: function() {
 			this.$emit("closeDialog");
+		},
+		changeOption: function() {
+			this.$emit("changeOption", this.option);
 		}
 	}
 }

@@ -13,7 +13,6 @@ export default {
 	data() {
 		return {
 			video: "assets/video.mp4",
-			theme: "blue",
 			style: "",
 			nightModeImage: "assets/night_mode.svg",
 			nightMode: 0,
@@ -22,12 +21,18 @@ export default {
 			isUpdateAlert: false,
 			isDialogCover: false,
 			isVersionDialog: false,
-			isOptionDialog: false
+			isOptionDialog: false,
+			option: {
+				theme: "blue"
+			}
 		}
 	},
 	mounted: function() {
 		document.title = "Ahoxa";
-		this.loadTheme(this.theme);
+		if (localStorage.getItem("ahoxa") !== null) {
+			this.option = JSON.parse(localStorage.getItem("ahoxa"));
+		}
+		this.loadTheme(this.option.theme);
 		const v = document.getElementById("video");
 		v.volume = 0;
 		v.play();
@@ -61,6 +66,11 @@ export default {
 			}).catch((e) => {
 				console.log(e);
 			});
+		},
+		changeOption: function(option) {
+			this.option = option;
+			this.loadTheme(this.option.theme);
+			localStorage.setItem("ahoxa", JSON.stringify(this.option));
 		},
 		reload: function() {
 			location.reload();
