@@ -33,3 +33,15 @@ td select {
 	border: 0;
 	border-bottom: solid 1px #9E9E9E;
 }
+
+@media screen and (max-width: 800px) {
+	td select {
+		width: 300px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	td select {
+		width: 150px;
+	}
+}
