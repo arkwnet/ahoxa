@@ -1,47 +1,59 @@
-table {
+.option {
 	width: 100%;
-	margin-top: -10px;
-}
-
-tr {
-	width: 100%;
-	height: 40px;
-	overflow: hidden;
-}
-
-th {
-	width: 200px;
-	font-family: RobotoRegular, NotoSansJPRegular;
-	font-size: 18px;
-	font-weight: normal;
-	text-align: left;
-}
-
-td {
-	float: right;
-}
-
-td select {
-	width: 400px;
-	height: 30px;
-	margin-top: 1px;
-	margin-right: 10px;
-	font-family: RobotoRegular, NotoSansJPRegular;
-	font-size: 18px;
-	background-color: #FAFAFA;
-	color: #424242;
-	border: 0;
-	border-bottom: solid 1px #9E9E9E;
-}
-
-@media screen and (max-width: 800px) {
-	td select {
-		width: 300px;
+	.columns {
+		overflow: hidden;
+		.left {
+			width: 200px;
+			margin-top: 5px;
+			float: left;
+		}
+		.right {
+			width: 400px;
+			margin-right: 10px;
+			float: right;
+			select {
+				width: 100%;
+				height: 40px;
+				margin-right: 10px;
+				padding-left: 5px;
+				font-family: RobotoRegular, NotoSansJPRegular;
+				font-size: 18px;
+				background-color: #EEEEEE;
+				color: #212121;
+				border: 0;
+				border-radius: 5px;
+				box-sizing: border-box;
+			}
+		}
 	}
 }
 
-@media screen and (max-width: 500px) {
-	td select {
-		width: 150px;
+@media screen and (max-width: 1000px) {
+	.option {
+		.columns {
+			.left {
+				width: 150px;
+			}
+			.right {
+				width: 300px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.option {
+		margin-top: -15px;
+		.columns {
+			.left {
+				width: 100%;
+			}
+			.right {
+				width: calc(100% - 10px);
+				margin-right: 0;
+				margin-top: 10px;
+				float: left;
+			}
+		}
 	}
 }

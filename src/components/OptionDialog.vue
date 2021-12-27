@@ -2,18 +2,18 @@
 	<div class="dialog">
 		<div class="header">設定</div>
 		<div class="contents">
-			<table>
-				<tbody>
-					<tr>
-						<th>テーマ</th>
-						<td>
-							<select v-model="option.theme" @change="changeOption">
-								<option v-for="theme in optionThemes" :key="theme.name" :value="theme.name">{{ theme.name }}</option>
-							</select>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+			<div class="option">
+				<div class="columns">
+					<div class="left">
+						テーマ
+					</div>
+					<div class="right">
+						<select v-model="option.theme" @change="changeOption">
+							<option v-for="theme in optionThemes" :key="theme.name" :value="theme.name">{{ theme.name }}</option>
+						</select>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="button" @click="closeDialog()">閉じる</div>
 	</div>
