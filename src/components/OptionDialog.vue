@@ -24,7 +24,10 @@ export default {
 	name: "App",
 	components: {},
 	props: {
-		currentOption: Object
+		currentOption: {
+			type: Object,
+			"default": () => (this.option)
+		}
 	},
 	emits: ["closeDialog", "changeOption"],
 	data() {
