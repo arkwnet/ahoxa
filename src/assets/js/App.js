@@ -23,7 +23,7 @@ export default {
 			isVersionDialog: false,
 			isOptionDialog: false,
 			option: {
-				theme: "blue"
+				theme: "default"
 			}
 		}
 	},
