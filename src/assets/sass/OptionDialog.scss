@@ -1,5 +1,11 @@
 .option {
 	width: 100%;
+	padding: 15px 10px;
+	padding-left: 20px;
+	background-color: #FFF;
+	border: solid 1px #BDBDBD;
+	border-radius: 5px;
+	box-sizing: border-box;
 	.columns {
 		overflow: hidden;
 		.left {
@@ -41,18 +47,23 @@
 	}
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
 	.option {
 		margin-top: -15px;
+		padding: 15px;
+		padding-top: 5px;
 		.columns {
 			.left {
 				width: 100%;
 			}
 			.right {
-				width: calc(100% - 10px);
+				width: 100%;
 				margin-right: 0;
 				margin-top: 10px;
 				float: left;
+				select {
+					margin-right: 0;
+				}
 			}
 		}
 	}

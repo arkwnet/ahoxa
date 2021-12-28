@@ -1,10 +1,10 @@
 .dialog {
 	position: fixed;
-	left: 15%;
+	left: 25%;
 	top: 15%;
-	width: 70%;
+	width: 50%;
 	height: 70%;
-	background-color: #FAFAFA;
+	background-color: #EEEEEE;
 	font-family: RobotoRegular, NotoSansJPRegular;
 	z-index: 200;
 	border-radius: 20px;
@@ -66,6 +66,13 @@
 			background-color: #212121;
 			cursor: pointer;
 		}
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.dialog {
+		width: 70%;
+		left: 15%;
 	}
 }
 
