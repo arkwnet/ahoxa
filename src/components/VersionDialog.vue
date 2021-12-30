@@ -14,7 +14,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="button" @click="closeVersionDialog()">閉じる</div>
+		<div class="button" @click="closeDialog()">閉じる</div>
 	</div>
 </template>
 
@@ -22,7 +22,7 @@
 export default {
 	name: "App",
 	components: {},
-	emits: ["closeVersionDialog"],
+	emits: ["closeDialog"],
 	data() {
 		return {
 			logoImage: "assets/logo.svg",
@@ -30,13 +30,13 @@ export default {
 		}
 	},
 	methods: {
-		closeVersionDialog: function() {
-			this.$emit("closeVersionDialog");
+		closeDialog: function() {
+			this.$emit("closeDialog");
 		}
 	}
 }
 </script>
 
 <style scoped lang="scss">
-@import "../assets/sass/VersionDialog.scss";
+@import "../assets/sass/Dialog.scss";
 </style>
