@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "axios": "^0.22.0",
-    "core-js": "^3.19.3",
-    "vue": "^3.2.23",
+    "core-js": "^3.20.1",
+    "vue": "^3.2.26",
     "vue-axios": "^3.3.7"
   },
   "devDependencies": {
