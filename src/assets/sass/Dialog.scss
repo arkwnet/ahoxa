@@ -4,10 +4,8 @@
 	top: 15%;
 	width: 50%;
 	height: 70%;
-	background-color: #EEEEEE;
 	font-family: RobotoRegular, NotoSansJPRegular;
 	z-index: 200;
-	border-radius: 20px;
 	.header, .contents, .button {
 		box-sizing: border-box;
 	}
@@ -19,7 +17,10 @@
 		left: 0;
 		top: 0;
 		font-size: 24px;
+		background-color: #FFF;
 		border-bottom: solid 1px #9E9E9E;
+		border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
 	}
 	.contents {
 		width: 100%;
@@ -30,6 +31,9 @@
 		top: 60px;
 		font-size: 18px;
 		overflow-y: auto;
+		background-color: #EEEEEE;
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
 		a {
 			color: #2196F3;
 			&:hover {
