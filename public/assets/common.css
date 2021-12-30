@@ -1,0 +1,14 @@
+@font-face {
+	font-family: RobotoRegular;
+	src: url("Roboto-Regular.ttf");
+}
+
+@font-face {
+	font-family: RobotoMedium;
+	src: url("Roboto-Medium.ttf");
+}
+
+@font-face {
+	font-family: NotoSansJPRegular;
+	src: url("NotoSansJP-Regular.otf");
+}

@@ -1,0 +1,70 @@
+.option {
+	width: 100%;
+	padding: 15px 10px;
+	padding-left: 20px;
+	background-color: #FFF;
+	border: solid 1px #BDBDBD;
+	border-radius: 5px;
+	box-sizing: border-box;
+	.columns {
+		overflow: hidden;
+		.left {
+			width: 200px;
+			margin-top: 5px;
+			float: left;
+		}
+		.right {
+			width: 400px;
+			margin-right: 10px;
+			float: right;
+			select {
+				width: 100%;
+				height: 40px;
+				margin-right: 10px;
+				padding-left: 5px;
+				font-family: RobotoRegular, NotoSansJPRegular;
+				font-size: 18px;
+				background-color: #EEEEEE;
+				color: #212121;
+				border: 0;
+				border-radius: 5px;
+				box-sizing: border-box;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.option {
+		.columns {
+			.left {
+				width: 150px;
+			}
+			.right {
+				width: 300px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.option {
+		margin-top: -15px;
+		padding: 15px;
+		padding-top: 5px;
+		.columns {
+			.left {
+				width: 100%;
+			}
+			.right {
+				width: 100%;
+				margin-right: 0;
+				margin-top: 10px;
+				float: left;
+				select {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}

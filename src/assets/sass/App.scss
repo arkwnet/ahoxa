@@ -92,6 +92,13 @@ body {
 	transition-duration: 1s;
 }
 
+#option {
+	position: fixed;
+	right: 110px;
+	top: 20px;
+	z-index: 80;
+}
+
 @media screen and (max-width: 800px) {
 	.button {
 		width: 48px;
@@ -103,5 +110,9 @@ body {
 			left: 8px;
 			top: 8px;
 		}
+	}
+
+	#option {
+		right: 90px;
 	}
 }
