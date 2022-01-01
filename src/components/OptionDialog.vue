@@ -40,7 +40,7 @@ export default {
 	},
 	mounted: function() {
 		this.option = this.currentOption;
-		this.axios.get("./config.json").then((response) => {
+		this.axios.get(`./config.json?timestamp=${new Date().getTime()}`).then((response) => {
 			let optionThemes = [];
 			for (let i = 0; i < response.data.themes.length; i++) {
 				optionThemes.push({name: response.data.themes[i]});

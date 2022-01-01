@@ -41,7 +41,7 @@ export default {
 				vm.time = "" + hour + ":" + min;
 				vm.second = sec;
 				if (frame == 360 && vm.updateFlag == false) {
-					vm.axios.get("./config.json").then((response) => {
+					vm.axios.get(`./config.json?timestamp=${new Date().getTime()}`).then((response) => {
 						const oldVersion = vm.convertVersion(require("../../package.json").version);
 						const newVersion = vm.convertVersion(response.data.version);
 						if (newVersion > oldVersion) {
