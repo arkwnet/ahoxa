@@ -1,7 +1,7 @@
 <template>
 	<div class="alert">
 		<div class="icon">
-			<img src="assets/update.svg">
+			<img src="assets/update.svg?version=20220101">
 		</div>
 		<div class="heading">
 			新しいAhoxaを利用可能

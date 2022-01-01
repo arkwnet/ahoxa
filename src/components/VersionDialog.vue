@@ -6,7 +6,7 @@
 			<div class="version">Version {{ version }}</div>
 			<div class="license">
 				<p>
-					Copyright (c) 2021 Sora Arakawa<br>
+					Copyright (c) 2021,2022 Sora Arakawa<br>
 					Licensed under the MIT License
 				</p>
 				<p>
@@ -25,7 +25,7 @@ export default {
 	emits: ["closeDialog"],
 	data() {
 		return {
-			logoImage: "assets/logo.svg",
+			logoImage: "assets/logo.svg?version=20220101",
 			version: require("../../package.json").version
 		}
 	},

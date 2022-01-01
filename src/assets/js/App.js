@@ -14,9 +14,9 @@ export default {
 		return {
 			video: "assets/video.mp4",
 			style: "",
-			nightModeImage: "assets/night_mode.svg",
+			nightModeImage: "assets/night_mode.svg?version=20220101",
 			nightMode: 0,
-			optionImage: "assets/option.svg",
+			optionImage: "assets/option.svg?version=20220101",
 			isCover: false,
 			isUpdateAlert: false,
 			isDialogCover: false,
@@ -61,7 +61,7 @@ export default {
 			this.isOptionDialog = false;
 		},
 		loadTheme: function(name) {
-			this.axios.get("./assets/themes/" + name + "/theme.json").then((response) => {
+			this.axios.get(`./assets/themes/${name}/theme.json?timestamp=${new Date().getTime()}`).then((response) => {
 				this.style = "background-image: url('assets/themes/" + name + "/" + response.data.image + "')";
 			}).catch((e) => {
 				console.log(e);
