@@ -29,7 +29,7 @@ export default {
 			"default": () => (this.option)
 		}
 	},
-	emits: ["closeDialog", "changeOption"],
+	emits: ["close-dialog", "change-option"],
 	data() {
 		return {
 			option: {
@@ -52,10 +52,10 @@ export default {
 	},
 	methods: {
 		closeDialog: function() {
-			this.$emit("closeDialog");
+			this.$emit("close-dialog");
 		},
 		changeOption: function() {
-			this.$emit("changeOption", this.option);
+			this.$emit("change-option", this.option);
 		}
 	}
 }

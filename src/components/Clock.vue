@@ -8,7 +8,7 @@
 export default {
 	name: "App",
 	components: {},
-	emits: ["openVersionDialog", "openUpdateAlert"],
+	emits: ["open-version-dialog", "open-update-alert"],
 	data() {
 		return {
 			date: "",
@@ -45,7 +45,7 @@ export default {
 						const oldVersion = vm.convertVersion(require("../../package.json").version);
 						const newVersion = vm.convertVersion(response.data.version);
 						if (newVersion > oldVersion) {
-							vm.$emit("openUpdateAlert");
+							vm.$emit("open-update-alert");
 							vm.updateFlag = true;
 						}
 					}).catch((e) => {
@@ -79,7 +79,7 @@ export default {
 			if (this.screenMode == 0) { document.exitFullscreen(); }
 		},
 		openVersionDialog: function() {
-			this.$emit("openVersionDialog");
+			this.$emit("open-version-dialog");
 		}
 	}
 }

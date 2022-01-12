@@ -22,7 +22,7 @@
 export default {
 	name: "App",
 	components: {},
-	emits: ["closeDialog"],
+	emits: ["close-dialog"],
 	data() {
 		return {
 			logoImage: "assets/logo.svg?version=20220101",
@@ -31,7 +31,7 @@ export default {
 	},
 	methods: {
 		closeDialog: function() {
-			this.$emit("closeDialog");
+			this.$emit("close-dialog");
 		}
 	}
 }
