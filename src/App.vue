@@ -8,7 +8,7 @@
 		<source :src="video" type="video/mp4">
 	</video>
 	<div class="main" :style="style">
-		<Clock @openVersionDialog="openVersionDialog" @openUpdateAlert="openUpdateAlert" />
+		<Clock @open-version-dialog="openVersionDialog" @open-update-alert="openUpdateAlert" />
 	</div>
 	<transition name="dialog">
 		<UpdateAlert v-if="isUpdateAlert" @click="reload" />
@@ -17,10 +17,10 @@
 		<div class="cover" id="dialog_cover" v-if="isDialogCover" @click="closeDialog"></div>
 	</transition>
 	<transition name="dialog">
-		<VersionDialog v-if="isVersionDialog" @closeDialog="closeDialog" />
+		<VersionDialog v-if="isVersionDialog" @close-dialog="closeDialog" />
 	</transition>
 	<transition name="dialog">
-		<OptionDialog v-if="isOptionDialog" :currentOption="this.option" @closeDialog="closeDialog" @changeOption="changeOption" />
+		<OptionDialog v-if="isOptionDialog" :current-option="option" @close-dialog="closeDialog" @change-option="changeOption" />
 	</transition>
 </template>
 
