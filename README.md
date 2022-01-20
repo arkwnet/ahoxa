@@ -1,4 +1,4 @@
-# Ahoxa
+![Ahoxa](https://arkw.net/products/web/ahoxa/img/logo.svg) 
 
 ## Project setup
 ```
