@@ -14,6 +14,18 @@
 					</div>
 				</div>
 			</div>
+			<div class="option">
+				<div class="columns">
+					<div class="left">
+						言語
+					</div>
+					<div class="right">
+						<select>
+							<option>日本語</option>
+						</select>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="button" @click="closeDialog()">閉じる</div>
 	</div>
