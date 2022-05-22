@@ -1,14 +1,10 @@
 <template>
 	<div class="alert">
 		<div class="icon">
-			<img src="assets/update.svg?version=20220101">
+			<img src="assets/img/update.svg" />
 		</div>
-		<div class="heading">
-			新しいAhoxaを利用可能
-		</div>
-		<div class="text">
-			ここをタップして再読み込み
-		</div>
+		<div class="heading">新しいAhoxaを利用可能</div>
+		<div class="text">ここをタップして再読み込み</div>
 	</div>
 </template>
 
@@ -17,9 +13,9 @@ export default {
 	name: "App",
 	components: {},
 	data() {
-		return {}
-	}
-}
+		return {};
+	},
+};
 </script>
 
 <style scoped lang="scss">

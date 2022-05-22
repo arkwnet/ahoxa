@@ -45,27 +45,33 @@ body {
 	z-index: 110;
 }
 
-.cover-enter-from, .cover-leave-to {
+.cover-enter-from,
+.cover-leave-to {
 	opacity: 0;
 }
 
-.cover-enter-to, .cover-leave-from {
+.cover-enter-to,
+.cover-leave-from {
 	opacity: 0.85;
 }
 
-.cover-enter-active, .cover-leave-active {
+.cover-enter-active,
+.cover-leave-active {
 	transition: opacity 1s;
 }
 
-.dialog-enter-from, .dialog-leave-to {
+.dialog-enter-from,
+.dialog-leave-to {
 	opacity: 0;
 }
 
-.dialog-enter-to, .dialog-leave-from {
+.dialog-enter-to,
+.dialog-leave-from {
 	opacity: 1;
 }
 
-.dialog-enter-active, .dialog-leave-active {
+.dialog-enter-active,
+.dialog-leave-active {
 	transition: opacity 0.3s;
 }
 
@@ -74,6 +80,7 @@ body {
 	height: 64px;
 	border: solid 3px #fff;
 	border-radius: 50%;
+
 	img {
 		width: 32px;
 		height: 32px;
@@ -103,6 +110,7 @@ body {
 	.button {
 		width: 48px;
 		height: 48px;
+
 		img {
 			width: 32px;
 			height: 32px;

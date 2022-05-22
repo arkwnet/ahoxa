@@ -8,26 +8,26 @@ export default {
 		Clock,
 		UpdateAlert,
 		VersionDialog,
-		OptionDialog
+		OptionDialog,
 	},
 	data() {
 		return {
-			video: "assets/video.mp4",
+			video: "assets/img/video.mp4",
 			style: "",
-			nightModeImage: "assets/night_mode.svg?version=20220101",
+			nightModeImage: "assets/img/night_mode.svg",
 			nightMode: 0,
-			optionImage: "assets/option.svg?version=20220101",
+			optionImage: "assets/img/option.svg",
 			isCover: false,
 			isUpdateAlert: false,
 			isDialogCover: false,
 			isVersionDialog: false,
 			isOptionDialog: false,
 			option: {
-				theme: "default"
-			}
-		}
+				theme: "default",
+			},
+		};
 	},
-	mounted: function() {
+	mounted: function () {
 		document.title = "Ahoxa";
 		if (localStorage.getItem("ahoxa") !== null) {
 			this.option = JSON.parse(localStorage.getItem("ahoxa"));
@@ -38,42 +38,58 @@ export default {
 		v.play();
 	},
 	methods: {
-		changeNightMode: function() {
+		changeNightMode: function () {
 			this.nightMode++;
-			if (this.nightMode == 2) { this.nightMode = 0; }
-			if (this.nightMode == 1) { this.isCover = true; }
-			if (this.nightMode == 0) { this.isCover = false; }
+			if (this.nightMode == 2) {
+				this.nightMode = 0;
+			}
+			if (this.nightMode == 1) {
+				this.isCover = true;
+			}
+			if (this.nightMode == 0) {
+				this.isCover = false;
+			}
 		},
-		openVersionDialog: function() {
+		openVersionDialog: function () {
 			this.isDialogCover = true;
 			this.isVersionDialog = true;
 		},
-		openUpdateAlert: function() {
+		openUpdateAlert: function () {
 			this.isUpdateAlert = true;
 		},
-		openOptionDialog: function() {
+		openOptionDialog: function () {
 			this.isDialogCover = true;
 			this.isOptionDialog = true;
 		},
-		closeDialog: function() {
+		closeDialog: function () {
 			this.isDialogCover = false;
 			this.isVersionDialog = false;
 			this.isOptionDialog = false;
 		},
-		loadTheme: function(name) {
-			this.axios.get(`./assets/themes/${name}/theme.json?timestamp=${new Date().getTime()}`).then((response) => {
-				this.style = "background-image: url('assets/themes/" + name + "/" + response.data.image + "')";
-			}).catch((e) => {
-				console.log(e);
-			});
+		loadTheme: function (name) {
+			this.axios
+				.get(
+					`./assets/themes/${name}/theme.json?timestamp=${new Date().getTime()}`
+				)
+				.then((response) => {
+					this.style =
+						"background-image: url('assets/themes/" +
+						name +
+						"/" +
+						response.data.image +
+						"')";
+				})
+				.catch((e) => {
+					console.log(e);
+				});
 		},
-		changeOption: function(option) {
+		changeOption: function (option) {
 			this.option = option;
 			this.loadTheme(this.option.theme);
 			localStorage.setItem("ahoxa", JSON.stringify(this.option));
 		},
-		reload: function() {
+		reload: function () {
 			location.reload();
-		}
-	}
-}
+		},
+	},
+};

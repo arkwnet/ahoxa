@@ -6,9 +6,13 @@
 	height: 70%;
 	font-family: RobotoRegular, NotoSansJPRegular;
 	z-index: 200;
-	.header, .contents, .button {
+
+	.header,
+	.contents,
+	.button {
 		box-sizing: border-box;
 	}
+
 	.header {
 		width: 100%;
 		height: 60px;
@@ -17,11 +21,12 @@
 		left: 0;
 		top: 0;
 		font-size: 24px;
-		background-color: #FFF;
-		border-bottom: solid 1px #9E9E9E;
+		background-color: #fff;
+		border-bottom: solid 1px #9e9e9e;
 		border-top-left-radius: 15px;
 		border-top-right-radius: 15px;
 	}
+
 	.contents {
 		width: 100%;
 		height: calc(100% - 60px);
@@ -31,24 +36,29 @@
 		top: 60px;
 		font-size: 18px;
 		overflow-y: auto;
-		background-color: #EEEEEE;
+		background-color: #eeeeee;
 		border-bottom-left-radius: 15px;
 		border-bottom-right-radius: 15px;
+
 		a {
-			color: #2196F3;
+			color: #2196f3;
+
 			&:hover {
-				color: #64B5F6;
+				color: #64b5f6;
 			}
 		}
+
 		.logo {
 			margin-bottom: 30px;
 			text-align: center;
 		}
+
 		.version {
 			margin-bottom: 40px;
 			text-align: center;
 			font-size: 24px;
 		}
+
 		.license {
 			text-align: center;
 		}
@@ -60,13 +70,14 @@
 		right: 20px;
 		top: 10px;
 		color: #212121;
-		background-color: #BDBDBD;
+		background-color: #bdbdbd;
 		border-radius: 20px;
-		transition-property: background-color,color;
+		transition-property: background-color, color;
 		transition-duration: 0.1s;
 		transition-timing-function: ease-in-out;
+
 		&:hover {
-			color: #FAFAFA;
+			color: #fafafa;
 			background-color: #212121;
 			cursor: pointer;
 		}
