@@ -1,5 +1,5 @@
 {
-	"version": "2.1.1",
-	"themes": ["default", "red", "green"],
-	"languages": ["ja_JP"]
+  "version": "2.2.0",
+  "themes": ["default", "red", "green"],
+  "languages": ["ja_JP"]
 }

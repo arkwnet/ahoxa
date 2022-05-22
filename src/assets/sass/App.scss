@@ -1,126 +1,126 @@
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	background-color: #000;
+  background-color: #000;
 }
 
 .video {
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	left: 0;
-	top: 0;
-	background-color: #000;
-	opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  opacity: 0;
 }
 
 .main {
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	left: 0;
-	top: 0;
-	background-size: cover;
-	background-position: bottom;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  background-position: bottom;
 }
 
 .cover {
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	left: 0;
-	top: 0;
-	background-color: #000;
-	opacity: 0.85;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  opacity: 0.85;
 }
 
 #cover {
-	z-index: 90;
+  z-index: 90;
 }
 
 #dialog_cover {
-	z-index: 110;
+  z-index: 110;
 }
 
 .cover-enter-from,
 .cover-leave-to {
-	opacity: 0;
+  opacity: 0;
 }
 
 .cover-enter-to,
 .cover-leave-from {
-	opacity: 0.85;
+  opacity: 0.85;
 }
 
 .cover-enter-active,
 .cover-leave-active {
-	transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 .dialog-enter-from,
 .dialog-leave-to {
-	opacity: 0;
+  opacity: 0;
 }
 
 .dialog-enter-to,
 .dialog-leave-from {
-	opacity: 1;
+  opacity: 1;
 }
 
 .dialog-enter-active,
 .dialog-leave-active {
-	transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 .button {
-	width: 64px;
-	height: 64px;
-	border: solid 3px #fff;
-	border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  border: solid 3px #fff;
+  border-radius: 50%;
 
-	img {
-		width: 32px;
-		height: 32px;
-		position: absolute;
-		left: 16px;
-		top: 16px;
-	}
+  img {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 16px;
+    top: 16px;
+  }
 }
 
 #night_mode {
-	position: fixed;
-	right: 20px;
-	top: 20px;
-	z-index: 100;
-	transition-property: opacity;
-	transition-duration: 1s;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 100;
+  transition-property: opacity;
+  transition-duration: 1s;
 }
 
 #option {
-	position: fixed;
-	right: 110px;
-	top: 20px;
-	z-index: 80;
+  position: fixed;
+  right: 110px;
+  top: 20px;
+  z-index: 80;
 }
 
 @media screen and (max-width: 800px) {
-	.button {
-		width: 48px;
-		height: 48px;
+  .button {
+    width: 48px;
+    height: 48px;
 
-		img {
-			width: 32px;
-			height: 32px;
-			position: absolute;
-			left: 8px;
-			top: 8px;
-		}
-	}
+    img {
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      left: 8px;
+      top: 8px;
+    }
+  }
 
-	#option {
-		right: 90px;
-	}
+  #option {
+    right: 90px;
+  }
 }
