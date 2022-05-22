@@ -1,6 +1,6 @@
 {
   "name": "ahoxa",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -20,8 +20,9 @@
     "@vue/compiler-sfc": "^3.2.34",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^9.0.1",
+    "node-sass": "^6.0.1",
     "sass": "^1.50.0",
-    "sass-loader": "^13.0.0"
+    "sass-loader": "^10.2.1"
   },
   "eslintConfig": {
     "root": true,
