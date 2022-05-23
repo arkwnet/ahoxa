@@ -69,12 +69,10 @@ export default {
     },
     loadTheme: function (name) {
       this.axios
-        .get(
-          `./assets/themes/${name}/theme.json?timestamp=${new Date().getTime()}`
-        )
+        .get(`./themes/${name}/theme.json?timestamp=${new Date().getTime()}`)
         .then((response) => {
           this.style =
-            "background-image: url('assets/themes/" +
+            "background-image: url('themes/" +
             name +
             "/" +
             response.data.image +
