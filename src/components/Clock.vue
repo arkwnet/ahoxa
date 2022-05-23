@@ -1,7 +1,9 @@
 <template>
-  <div class="main-date" @click="changeScreenMode">{{ date }}</div>
-  <div class="main-time" @click="openVersionDialog">{{ time }}</div>
-  <div class="main-second">{{ second }}</div>
+  <div>
+    <div class="main-date" @click="changeScreenMode">{{ date }}</div>
+    <div class="main-time" @click="openVersionDialog">{{ time }}</div>
+    <div class="main-second">{{ second }}</div>
+  </div>
 </template>
 
 <script>
