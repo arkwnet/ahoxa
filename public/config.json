@@ -1,5 +1,10 @@
 {
   "version": "2.2.0",
   "themes": ["default", "red", "green"],
-  "languages": ["ja_JP"]
+  "languages": [
+    {
+      "id": "ja_JP",
+      "name": "日本語"
+    }
+  ]
 }

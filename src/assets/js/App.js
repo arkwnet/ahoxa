@@ -24,6 +24,7 @@ export default {
       isOptionDialog: false,
       option: {
         theme: "default",
+        language: "ja_JP",
       },
     };
   },

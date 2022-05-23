@@ -22,8 +22,14 @@
         <div class="columns">
           <div class="left">言語</div>
           <div class="right">
-            <select>
-              <option>日本語</option>
+            <select v-model="option.language">
+              <option
+                v-for="language in optionLanguages"
+                :key="language.id"
+                :value="language.id"
+              >
+                {{ language.name }}
+              </option>
             </select>
           </div>
         </div>
@@ -47,9 +53,11 @@ export default {
   data() {
     return {
       option: {
-        theme: "blue",
+        theme: "default",
+        language: "ja_JP",
       },
       optionThemes: [],
+      optionLanguages: [],
     };
   },
   mounted: function () {
@@ -62,6 +70,7 @@ export default {
           optionThemes.push({ name: response.data.themes[i] });
         }
         this.optionThemes = optionThemes;
+        this.optionLanguages = response.data.languages;
       })
       .catch((e) => {
         console.log(e);
