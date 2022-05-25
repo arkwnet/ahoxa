@@ -32,6 +32,9 @@ export default {
     document.title = "Ahoxa";
     if (localStorage.getItem("ahoxa") !== null) {
       this.option = JSON.parse(localStorage.getItem("ahoxa"));
+      if (this.option.language == undefined) {
+        this.option.language = "ja_JP";
+      }
     }
     this.loadTheme(this.option.theme);
     const v = document.getElementById("video");
