@@ -1,85 +1,94 @@
-.main-date, .main-time {
-	position: fixed;
-	left: 55px;
-	color: #fff;
-	text-shadow: 0 0 5px #616161;
-	z-index: 10;
+.main-date,
+.main-time {
+  position: fixed;
+  left: 55px;
+  color: #fff;
+  text-shadow: 0 0 5px #616161;
+  z-index: 10;
 }
 
 .main-date {
-	bottom: 245px;
-	font-family: RobotoRegular, NotoSansJPRegular;
-	font-size: 60px;
-	font-weight: normal;
+  bottom: 245px;
+  font-family: RobotoRegular, NotoSansJPRegular;
+  font-size: 60px;
+  font-weight: normal;
 }
 
 .main-time {
-	bottom: 10px;
-	font-family: RobotoMedium;
-	font-size: 220px;
+  bottom: 10px;
+  font-family: RobotoMedium;
+  font-size: 220px;
 }
 
 .main-second {
-	position: fixed;
-	right: -15px;
-	top: -120px;
-	color: #fff;
-	font-family: RobotoRegular, NotoSansJPRegular;
-	font-size: 500px;
-	opacity: 0.3;
-	letter-spacing: -15px;
-	z-index: 0;
+  position: fixed;
+  right: -15px;
+  top: -120px;
+  color: #fff;
+  font-family: RobotoRegular, NotoSansJPRegular;
+  font-size: 500px;
+  opacity: 0.3;
+  letter-spacing: -15px;
+  z-index: 0;
 }
 
 @media screen and (min-width: 1400px) {
-	.main-date {
-		bottom: 310px;
-		font-size: 80px;
-	}
-	.main-time {
-		bottom: -10px;
-		font-size: 300px;
-	}
-	.main-second {
-		right: -25px;
-		top: -170px;
-		font-size: 700px;
-	}
+  .main-date {
+    bottom: 310px;
+    font-size: 80px;
+  }
+
+  .main-time {
+    bottom: -10px;
+    font-size: 300px;
+  }
+
+  .main-second {
+    right: -25px;
+    top: -170px;
+    font-size: 700px;
+  }
 }
 
 @media screen and (max-width: 930px) {
-	.main-date, .main-time {
-		left: 30px;
-	}
-	.main-date {
-		bottom: 160px;
-		font-size: 40px;
-	}
-	.main-time {
-		bottom: 0;
-		font-size: 148px;
-	}
+  .main-date,
+  .main-time {
+    left: 30px;
+  }
+
+  .main-date {
+    bottom: 160px;
+    font-size: 40px;
+  }
+
+  .main-time {
+    bottom: 0;
+    font-size: 148px;
+  }
 }
 
 @media screen and (max-width: 560px) {
-	.main-second {
-		right: -10px;
-		top: -65px;
-		font-size: 300px;
-		letter-spacing: -10px;
-	}
+  .main-second {
+    right: -10px;
+    top: -65px;
+    font-size: 300px;
+    letter-spacing: -10px;
+  }
 }
 
 @media screen and (max-width: 460px) {
-	.main-date, .main-time {
-		left: 25px;
-	}
-	.main-date {
-		bottom: 125px;
-		font-size: 28px;
-	}
-	.main-time {
-		bottom: 15px;
-		font-size: 102px;
-	}
+  .main-date,
+  .main-time {
+    left: 25px;
+  }
+
+  .main-date {
+    bottom: 125px;
+    font-size: 28px;
+  }
+
+  .main-time {
+    bottom: 15px;
+    font-size: 102px;
+  }
 }
