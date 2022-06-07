@@ -1,6 +1,6 @@
 <template>
   <div class="dialog">
-    <div class="header">Ahoxa について</div>
+    <div class="header">{{ $t("message.versionTitle") }}</div>
     <div class="contents">
       <div class="logo"><img :src="logoImage" /></div>
       <div class="version">Version {{ version }}</div>
@@ -16,7 +16,9 @@
         </p>
       </div>
     </div>
-    <div class="button" @click="closeDialog()">閉じる</div>
+    <div class="button" @click="closeDialog()">
+      {{ $t("message.dialogClose") }}
+    </div>
   </div>
 </template>
 
