@@ -22,7 +22,7 @@
         <div class="columns">
           <div class="left">{{ $t("message.optionLanguage") }}</div>
           <div class="right">
-            <select v-model="option.language">
+            <select v-model="option.language" @change="changeOption">
               <option
                 v-for="language in optionLanguages"
                 :key="language.id"

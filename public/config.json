@@ -5,6 +5,14 @@
     {
       "id": "ja_JP",
       "name": "日本語"
+    },
+    {
+      "id": "en_US",
+      "name": "English"
+    },
+    {
+      "id": "zh_CN",
+      "name": "简体中文"
     }
   ]
 }
