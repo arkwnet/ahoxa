@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div class="main-date" @click="changeScreenMode">{{ date }}</div>
+    <div class="main-date" @click="changeScreenMode">
+      {{ date }}
+      <span>{{ dayOfWeek }}</span>
+    </div>
     <div class="main-time" @click="openVersionDialog">{{ time }}</div>
     <div class="main-second">{{ second }}</div>
   </div>
@@ -14,6 +17,7 @@ export default {
   data() {
     return {
       date: "",
+      dayOfWeek: "",
       time: "",
       second: "",
       screenMode: 0,
@@ -26,7 +30,27 @@ export default {
   },
   methods: {
     updateClock: function () {
-      const dayOfWeekArray = ["日", "月", "火", "水", "木", "金", "土"];
+      const dayOfWeekArray = {
+        ja_JP: ["日", "月", "火", "水", "木", "金", "土"],
+        en_US: [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
+        zh_CN: [
+          "星期天",
+          "星期一",
+          "星期二",
+          "星期三",
+          "星期四",
+          "星期五",
+          "星期六",
+        ],
+      };
       let now, year, month, day, dayOfWeek, hour, min, sec;
       let vm = this;
       let frame = this.frame;
@@ -35,12 +59,24 @@ export default {
         year = now.getFullYear();
         month = now.getMonth() + 1;
         day = now.getDate();
-        dayOfWeek = dayOfWeekArray[now.getDay()];
+        dayOfWeek = dayOfWeekArray[vm.$i18n.locale][now.getDay()];
         hour = vm.clockProcess(now.getHours());
         min = vm.clockProcess(now.getMinutes());
         sec = vm.clockProcess(now.getSeconds());
-        vm.date =
-          "" + year + "年" + month + "月" + day + "日（" + dayOfWeek + "）";
+        switch (vm.$i18n.locale) {
+          case "ja_JP":
+            vm.date = "" + year + "年" + month + "月" + day + "日";
+            vm.dayOfWeek = "(" + dayOfWeek + ")";
+            break;
+          case "en_US":
+            vm.date = "" + year + "/" + month + "/" + day;
+            vm.dayOfWeek = dayOfWeek;
+            break;
+          case "zh_CN":
+            vm.date = "" + year + "年" + month + "月" + day + "日";
+            vm.dayOfWeek = dayOfWeek;
+            break;
+        }
         vm.time = "" + hour + ":" + min;
         vm.second = sec;
         if (frame == 360 && vm.updateFlag == false) {
