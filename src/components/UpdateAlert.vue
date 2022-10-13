@@ -3,8 +3,8 @@
     <div class="icon">
       <img src="assets/img/update.svg" />
     </div>
-    <div class="heading">新しいAhoxaを利用可能</div>
-    <div class="text">ここをタップして再読み込み</div>
+    <div class="heading">{{ $t("message.updateTitle") }}</div>
+    <div class="text">{{ $t("message.updateDescription") }}</div>
   </div>
 </template>
 

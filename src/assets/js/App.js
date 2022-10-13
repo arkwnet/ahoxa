@@ -36,6 +36,7 @@ export default {
         this.option.language = "ja_JP";
       }
     }
+    this.$i18n.locale = this.option.language;
     this.loadTheme(this.option.theme);
     const v = document.getElementById("video");
     v.volume = 0;
@@ -87,6 +88,7 @@ export default {
     },
     changeOption: function (option) {
       this.option = option;
+      this.$i18n.locale = this.option.language;
       this.loadTheme(this.option.theme);
       localStorage.setItem("ahoxa", JSON.stringify(this.option));
     },

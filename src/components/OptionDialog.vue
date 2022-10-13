@@ -1,10 +1,10 @@
 <template>
   <div class="dialog">
-    <div class="header">設定</div>
+    <div class="header">{{ $t("message.optionTitle") }}</div>
     <div class="contents">
       <div class="option">
         <div class="columns">
-          <div class="left">テーマ</div>
+          <div class="left">{{ $t("message.optionTheme") }}</div>
           <div class="right">
             <select v-model="option.theme" @change="changeOption">
               <option
@@ -20,9 +20,9 @@
       </div>
       <div class="option">
         <div class="columns">
-          <div class="left">言語</div>
+          <div class="left">{{ $t("message.optionLanguage") }}</div>
           <div class="right">
-            <select v-model="option.language">
+            <select v-model="option.language" @change="changeOption">
               <option
                 v-for="language in optionLanguages"
                 :key="language.id"
@@ -35,7 +35,9 @@
         </div>
       </div>
     </div>
-    <div class="button" @click="closeDialog()">閉じる</div>
+    <div class="button" @click="closeDialog()">
+      {{ $t("message.dialogClose") }}
+    </div>
   </div>
 </template>
 
