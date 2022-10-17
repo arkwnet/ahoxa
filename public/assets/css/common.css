@@ -11,4 +11,5 @@
 @font-face {
   font-family: NotoSansJPRegular;
   src: url("../fonts/NotoSansJP-Regular.otf");
+  font-display: swap;
 }
