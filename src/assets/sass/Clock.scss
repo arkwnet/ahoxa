@@ -1,14 +1,14 @@
 .main-date,
 .main-time {
   position: fixed;
-  left: 55px;
+  left: 50px;
   color: #fff;
   text-shadow: 0 0 5px #616161;
   z-index: 10;
 }
 
 .main-date {
-  bottom: 245px;
+  bottom: 255px;
   font-family: RobotoRegular, NotoSansJPRegular;
   font-size: 60px;
   font-weight: normal;
@@ -21,7 +21,7 @@
 .main-time {
   bottom: 10px;
   font-family: RobotoMedium;
-  font-size: 220px;
+  font-size: 230px;
 }
 
 .main-second {
@@ -61,17 +61,23 @@
   }
 
   .main-date {
-    bottom: 160px;
-    font-size: 40px;
+    bottom: 150px;
+    font-size: 36px;
   }
 
   .main-time {
     bottom: 0;
-    font-size: 148px;
+    font-size: 138px;
   }
 }
 
 @media screen and (max-width: 560px) {
+  .main-date {
+    span {
+      padding-left: 5px;
+    }
+  }
+
   .main-second {
     right: -10px;
     top: -65px;
@@ -92,7 +98,7 @@
   }
 
   .main-time {
-    bottom: 15px;
-    font-size: 102px;
+    bottom: 5px;
+    font-size: 108px;
   }
 }
