@@ -35,6 +35,13 @@
         border-radius: 5px;
         box-sizing: border-box;
       }
+
+      .preview {
+        width: 300px;
+        height: 170px;
+        margin-top: 12px;
+        background-size: cover;
+      }
     }
   }
 }
@@ -73,6 +80,19 @@
 
         select {
           margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .option {
+    .columns {
+      .right {
+        .preview {
+          width: 200px;
+          height: 110px;
         }
       }
     }
