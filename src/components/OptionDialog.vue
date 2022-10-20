@@ -15,6 +15,7 @@
                 {{ theme.name }}
               </option>
             </select>
+            <div class="preview" :style="preview"></div>
           </div>
         </div>
       </div>
@@ -60,6 +61,7 @@ export default {
       },
       optionThemes: [],
       optionLanguages: [],
+      preview: "",
     };
   },
   mounted: function () {
@@ -73,6 +75,7 @@ export default {
         }
         this.optionThemes = optionThemes;
         this.optionLanguages = response.data.languages;
+        this.loadPreview();
       })
       .catch((e) => {
         console.log(e);
@@ -84,6 +87,26 @@ export default {
     },
     changeOption: function () {
       this.$emit("change-option", this.option);
+      this.loadPreview();
+    },
+    loadPreview: function () {
+      this.axios
+        .get(
+          `./themes/${
+            this.option.theme
+          }/theme.json?timestamp=${new Date().getTime()}`
+        )
+        .then((response) => {
+          this.preview =
+            "background-image: url('themes/" +
+            this.option.theme +
+            "/" +
+            response.data.image +
+            "')";
+        })
+        .catch((e) => {
+          console.log(e);
+        });
     },
   },
 };
