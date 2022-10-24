@@ -38,9 +38,23 @@
 
       .preview {
         width: 300px;
-        height: 170px;
+        height: 180px;
         margin-top: 12px;
         background-size: cover;
+        position: relative;
+
+        div,
+        img {
+          width: 300px;
+          height: 180px;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+
+        div {
+          background-size: 300px 180px;
+        }
       }
     }
   }
@@ -92,7 +106,17 @@
       .right {
         .preview {
           width: 200px;
-          height: 110px;
+          height: 120px;
+
+          div,
+          img {
+            width: 200px;
+            height: 120px;
+          }
+
+          div {
+            background-size: 200px 120px;
+          }
         }
       }
     }
