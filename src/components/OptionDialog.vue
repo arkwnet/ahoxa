@@ -15,7 +15,10 @@
                 {{ theme.name }}
               </option>
             </select>
-            <div class="preview" :style="preview"></div>
+            <div class="preview">
+              <div :style="preview"></div>
+              <img src="assets/img/preview.png" />
+            </div>
           </div>
         </div>
       </div>
