@@ -22,7 +22,7 @@
     "eslint": "^8.52.0",
     "eslint-plugin-vue": "^9.18.0",
     "node-sass": "^9.0.0",
-    "sass": "^1.69.4",
+    "sass": "^1.69.5",
     "sass-loader": "^13.3.2"
   },
   "eslintConfig": {
