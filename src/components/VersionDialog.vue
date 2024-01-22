@@ -6,7 +6,7 @@
       <div class="version">Version {{ version }}</div>
       <div class="license">
         <p>
-          Copyright (c) 2021-2023 Sora Arakawa<br />
+          Copyright (c) 2021-2024 Sora Arakawa<br />
           Licensed under the MIT License
         </p>
         <p>
